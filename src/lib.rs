@@ -13,6 +13,7 @@ mod iter_m;
 mod ref_m;
 mod threads_m;
 mod oop_m;
+mod advanced_m;
 pub use base_m::base_test;
 pub use struct_m::struct_test;
 pub use enum_m::enum_test;
@@ -28,6 +29,7 @@ pub use iter_m::iter_test;
 pub use ref_m::ref_init;
 pub use threads_m::threads_init;
 pub use oop_m::oop_init;
+pub use advanced_m::advanced_init;
 use std::env;
 
 pub fn init() {
@@ -86,6 +88,9 @@ pub fn init() {
         },
         "oop" => {
             oop_init::init();
+        },
+        "advanced" => {
+            advanced_init::init();
         },
         _ => {
 
